@@ -92,6 +92,73 @@
         font-size: 50px;
        }
         
+
+       @media only screen and (max-width: 768px) {
+          /* Styles for mobile phones */
+         header{
+            
+            position: relative;
+            top: 0;
+            
+         }
+
+        body{
+        padding: 0;
+        margin: 0;
+
+        }
+        
+        nav{
+            padding: 10px;
+            
+        }
+
+
+
+       nav {
+        flex-direction: column; /* Stack nav items */
+        padding: 1em;
+    }
+
+    nav a {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1em; /* Add space between links */
+        font-size: 1.2em; /* Reduce font size for links */
+    }
+
+    nav input[type="text"] {
+        margin-top: 1em;
+        width: 50%; /* Full width search bar */
+        padding: 0.5em; /* Adjust padding */
+    }
+
+    nav input[type="submit"] {
+        margin-top: 0.5em;
+        width: 50px; /* Full width for submit button */
+    }
+
+    .material-symbols-outlined {
+        margin-top: 1em; /* Space for the cart icon */
+        margin-right: 50%;
+    }
+
+    .cart-no {
+        margin-right: 10%;
+    }
+
+    footer {
+        padding: 2em 1em; /* Reduce footer padding */
+        text-align: center; /* Ensure everything is centered */
+    }
+
+    footer h2, footer h4 {
+        font-size: 1em; /* Reduce font size */
+    }
+
+    footer p {
+        font-size: 0.9em; /* Smaller copyright text */
+    }
+       }
     </style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
