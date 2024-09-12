@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radiance Beauty-products</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+BE+WAL:wght@100..400&display=swap" rel="stylesheet">
-
+    <title>Summer Glow Sale - Beauty Products</title>
     <style>
         body {
-            font-family: "Montserrat", sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -147,8 +143,74 @@
         .footer p {
             margin: 0;
         }
+       
+        @media only screen and (max-width: 768px) {
+          /* Styles for mobile phones */
+         header{
+            
+            position: relative;
+            top: 0;
+            
+         }
 
+        body{
+        padding: 0;
+        margin: 0;
+
+        }
         
+        nav{
+            padding: 10px;
+            
+        }
+
+
+        nav {
+        flex-direction: column; /* Stack nav items */
+        padding: 1em;
+    }
+
+    nav a {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1em; /* Add space between links */
+        font-size: 1.2em; /* Reduce font size for links */
+    }
+
+    nav input[type="text"] {
+        margin-top: 1em;
+        width: 50%; /* Full width search bar */
+        padding: 0.5em; /* Adjust padding */
+    }
+
+    nav input[type="submit"] {
+        margin-top: 0.5em;
+        width: 50px; /* Full width for submit button */
+    }
+
+    .material-symbols-outlined {
+        margin-top: 1em; /* Space for the cart icon */
+        margin-right: 50%;
+    }
+
+    .cart-no {
+        margin-right: 10%;
+    }
+
+    footer {
+        padding: 2em 1em; /* Reduce footer padding */
+        text-align: center; /* Ensure everything is centered */
+    }
+
+    footer h2, footer h4 {
+        font-size: 1em; /* Reduce font size */
+    }
+
+    footer p {
+        font-size: 0.9em; /* Smaller copyright text */
+    }
+        
+    }
+
     </style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -190,7 +252,7 @@
                     <h3>SPF 50 Sunscreen</h3>
                   <p>Protect your skin from harmful UV rays.</p>
                   <p class="price">$20.00</p>
-                  <a href="#">Add to Cart</a>
+                  <a href="#" onclick="addToCart('spf 50 sunscreen', 20.00)">Add to Cart</a>
                 </div>
                 
             </div>
@@ -202,7 +264,7 @@
                  <h3>Glowing Bronzer</h3>
                  <p>Get a sun-kissed look with our shimmering bronzer.</p>
                  <p class="price">$15.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('glowing Bronzer', 15.00)">Add to Cart</a>
                 </div>
             </div>
             <div class="product-card">
@@ -213,7 +275,7 @@
                  <h3>After Sun Lotion</h3>
                  <p>Soothing and hydrating lotion for post-sun care.</p>
                  <p class="price">$12.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addTocart('after sun lotion', 12.00)">Add to Cart</a>
                 </div>
             </div>
         </div>
@@ -232,7 +294,7 @@
                  <h3>Silk Touch Eyeshadow Quad</h3>
                  <p>Create endless eye-catching looks with our silky smooth eyeshadow quad, featuring four versatile, blendable shades.</p>
                  <p class="price">$24.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('silk touch eyeshadow quad', 24.00)">Add to Cart</a>
                 </div>
             </div>
             <div class="product-card">
@@ -243,7 +305,7 @@
                  <h3>Radiant Flush Blush</h3>
                  <p>Achieve a natural, radiant glow with our Radiant Flush Blush. </p>
                  <p class="price">$18.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('radiant flush blush', 18.00)">Add to Cart</a>
                 </div>
             </div>
             <div class="product-card">
@@ -254,7 +316,7 @@
                  <h3>Precision Liquid Eyeliner</h3>
                  <p>Create sharp, defined lines with ease using our Precision Liquid Eyeliner. </p>
                  <p class="price">$15.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('precision liquid eyeliner', 15.00)">Add to Cart</a>
                 </div>
             </div>
         </div>
@@ -273,7 +335,7 @@
                  <h3>Flawless Finish Foundation</h3>
                  <p>Achieve perfect coverage with our top-rated foundation.</p>
                  <p class="price">$35.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('flawless finish foundation', 35.00)">Add to Cart</a>
                 </div>
             </div>
             <div class="product-card">
@@ -284,7 +346,7 @@
                  <h3>Volume Lash Mascara</h3>
                  <p>Add volume and length to your lashes.</p>
                  <p class="price">$20.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('volume lash mascara', 20.00)">Add to Cart</a>
                 </div>
             </div>
             <div class="product-card">
@@ -295,7 +357,7 @@
                  <h3>Shiny Lip Gloss</h3>
                  <p>Get glossy lips with our best-selling lip gloss.</p>
                  <p class="price">$10.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('shiny lip gloss', 10.00)">Add to Cart</a>
                 </div>
             </div>
         </div>
@@ -313,7 +375,7 @@
                  <h3>Anti-Aging Eye Cream</h3>
                  <p>Reduce wrinkles and dark circles with our limited edition eye cream.</p>
                  <p class="price">$25.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('anti-aging eye cream', 25.00)">Add to Cart</a>
                 </div>
             </div>
             <div class="product-card">
@@ -324,7 +386,7 @@
                  <h3>Hydrating Face Mask</h3>
                  <p>Rejuvenate your skin with our deep hydrating mask.</p>
                  <p class="price">$18.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('hydrating face mask', 18.00)">Add to Cart</a>
                 </div>
             </div>
             <div class="product-card">
@@ -335,7 +397,7 @@
                  <h3>Radiant Highlighter</h3>
                  <p>Illuminate your features with our glowing highlighter.</p>
                  <p class="price">$22.00</p>
-                 <a href="#">Add to Cart</a>
+                 <a href="#" onclick="addToCart('radiant highlighter', 22.00)">Add to Cart</a>
                 </div>
             </div>
         </div>
@@ -343,14 +405,35 @@
 
     
 
-    <script>
-        function showCategory(categoryId) {
-            var categories = document.querySelectorAll('.category-section');
-            categories.forEach(function (category) {
-                category.classList.remove('active');
-            });
-            document.getElementById(categoryId).classList.add('active');
-        }
+
+       <script>
+        
+
+        function addToCart(productName, productPrice) {
+           let cart = JSON.parse(localStorage.getItem('cart')) || [];
+           
+           // Add the new product to the cart
+           cart.push({name: productName, price: productPrice});
+           
+           // Update localStorage with the new cart
+           localStorage.setItem('cart', JSON.stringify(cart));
+       
+           alert(`${productName} has been added to your cart!`);
+       
+           // Update the cart count
+           updateCartCount();
+       }
+       
+       
+               // Function to update cart count
+               function updateCartCount() {
+                   let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                   document.getElementById('cart-count').textContent = cart.length;
+               }
+       
+               // Call updateCartCount on page load to maintain cart state
+               document.addEventListener('DOMContentLoaded', updateCartCount);
+           
     </script>
 </body>
 

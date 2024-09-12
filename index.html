@@ -3,46 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radiance Beauty -home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+BE+WAL:wght@100..400&display=swap" rel="stylesheet">
+    <title>Parallax Scrolling Effect with Layers</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            font-family: "Montserrat", sans-serif;
-            min-height: 100vh;
-            background-color: #f4f4f4;
-         }
+            font-family: Arial, sans-serif;
+            
+            }
 
         footer {
             text-align: center;
             background-color: rgb(155, 155, 253);
-            padding: 20px;
+            padding: 5em;
             position: relative;
             bottom: 0;
-            width: 100%;
+            width: 100vw;
             z-index: 1000; /* Ensure it appears above other elements */
             position: relative;
             
-            
-
         }
+
+        
         body{
             
-            padding-bottom: 120px; 
-            padding-top: 120px; /* Adjust based on your header height */
+            padding-bottom: 8rem; 
+            padding-top: 8rem; /* Adjust based on your header height */
             
            }
          
         
         header{
             text-align: center;
-         background-color: rgb(155, 155, 253);
             position: fixed;
             top: 0;
            width: 100%;
@@ -51,12 +44,12 @@
          }
         
          h1{
-            font-size: 35px;
+            font-size: 2rem;
          }
 
          nav {
          background-color: rgb(128, 128, 175);
-          padding: 8px;
+          padding: 1em;
          display: flex;
           align-items: center;
          justify-content: center;
@@ -65,8 +58,8 @@
         
          nav a{
             text-decoration: none;
-            margin-right: 100px;
-            font-size: 25px;
+            margin-right: 5em;
+            font-size: 1.5em;
         }
         nav a:hover {
             text-decoration: underline;
@@ -77,7 +70,7 @@
         }
         nav input{
             border: none;
-            padding: 5px;
+            padding: 0.5em;
         } 
 
         /* Parallax Layers */
@@ -90,6 +83,7 @@
             display:flex;
             flex-direction: row;
             align-items: normal;
+
             
         }
 
@@ -98,12 +92,12 @@
             z-index: 0;
         }
         .title{
-            font-size: 50px;
+            font-size: 3em;
             display: block;
             color: blue;
             z-index: 1;
             position: fixed;
-            top: 85%;
+            top: 73%;
            left: 55%;
            transform: translate(-50%, -50%);
 
@@ -118,40 +112,33 @@
             opacity: 1;
 
             position: absolute;
-            top: 90%;
+            top: 85%;
            left: 50%;
            
            transform: translate(-50%, -50%);
           /* Adjust size if needed */
-          width: 400px;
+          width: 25em;
           height: auto;
           }
 
-        /*.layer3 {
-            background-image: url('your-background3.png');
-            z-index: 3;
-            opacity: 0.5;
-        } */
+       
 
         /* Content Section */
         .content {
             height: 100vh;
             background-color: #f4f4f4;
             
-            font-size: 24px;
+            font-size: 2em;
             z-index: 4;
             position: relative;
-
-            
-          min-height: 100vh;
-        padding-bottom: 250px; /* Ensure this matches your footer's height */
+            padding-bottom: 8em; /* Ensure this matches your footer's height */
 
 
         }
         .grid-container1,.grid-container2 {
           display: grid;
-          grid-template-columns:  auto auto;
-          column-gap: 20px;
+          grid-template-columns:  1fr 1fr;
+          column-gap: 2em;
         }
         .grid-item1,.grid-item2 {
          background-color: rgba(255, 255, 255, 0.8);
@@ -162,7 +149,7 @@
         .banner {
             
             width: 100%;
-            height: 300px;
+            height: 10em;
             color: rgb(9, 9, 9);
             text-align: center;
             display: flex;
@@ -173,7 +160,7 @@
             margin-bottom: 20px;
             border: none;
             box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            margin-top: 50px;
+            margin-top: 1.5em;
 
             border: none;
            box-shadow: rgba(46, 15, 15, 0.15) 1.95px 1.95px 2.6px;
@@ -188,19 +175,19 @@
 
         .banner h1 {
             font-size: 1em;
-            margin: 10px;
-            padding: 0 20px;
+            margin: 2em;
+            padding: 0 1em;
             
             
             
         }
         .banner .cta {
-            margin-top: 20px;
-            padding: 10px 20px;
+            margin-top: 3em;
+            padding: 0.2em 0.3em;
             background-color: #ff7f7f;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 0.5em;
             font-weight: bold;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             
@@ -238,6 +225,107 @@
 .material-symbols-outlined{
         margin-left: auto;
     }
+
+    
+    
+    @media only screen and (max-width: 768px) {
+          /* Styles for mobile phones */
+         header{
+            
+            position: relative;
+            top: 0;
+            
+         }
+
+        body{
+        padding: 0;
+        margin: 0;
+
+        }
+        
+        nav{
+            padding: 10px;
+            
+        }
+
+    
+    h1 {
+        font-size: 1.5rem; /* Reduce heading size */
+        
+    }
+    .title {
+        font-size: 1.3em; /* Reduce title size */
+        top: 70%; /* Adjust placement on mobile */
+        left: 48%; /* Center properly */
+        width: 90%; /* Ensure it fits on mobile */
+        
+
+    }
+
+    .grid-container1, .grid-container2 {
+        grid-template-columns: 1fr; /* Stack banners vertically */
+        row-gap: 2em;
+    }
+    .banner {
+        height: 6em;
+        font-size: 0.8em; /* Reduce banner text size */
+    }
+    .layer2 {
+        width: 20em; /* Reduce image size */
+    }
+
+    
+    nav {
+        flex-direction: column; /* Stack nav items */
+        padding: 1em;
+    }
+
+    nav a {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1em; /* Add space between links */
+        font-size: 1.2em; /* Reduce font size for links */
+    }
+
+    nav input[type="text"] {
+        margin-top: 1em;
+        width: 50%; /* Full width search bar */
+        padding: 0.5em; /* Adjust padding */
+    }
+
+    nav input[type="submit"] {
+        margin-top: 0.5em;
+        width: 50px; /* Full width for submit button */
+    }
+
+    .material-symbols-outlined {
+        margin-top: 1em; /* Space for the cart icon */
+        margin-right: 50%;
+    }
+
+    .cart-no {
+        margin-right: 10%;
+    }
+
+    footer {
+        padding: 2em 1em; /* Reduce footer padding */
+        text-align: center; /* Ensure everything is centered */
+    }
+
+    footer h2, footer h4 {
+        font-size: 1em; /* Reduce font size */
+    }
+
+    footer p {
+        font-size: 0.9em; /* Smaller copyright text */
+    }
+
+    .layer1{
+    height: 500px;
+
+    }
+}
+
+
 
         
     </style>
@@ -351,4 +439,3 @@
 
 </body>
 </html>
-
